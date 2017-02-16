@@ -1,0 +1,459 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    margin:0;
+    color: #232323;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: rgba(179, 212, 252, 1);
+    text-shadow: none;
+}
+
+::selection {
+    background: rgba(210, 43, 143, 1);
+    text-shadow: none;
+}
+
+h2{
+    font-size:1.2em
+}
+
+/* ==========================================================================
+   START: MAIN NAV STYLES
+   ========================================================================== */
+
+.page{
+   -moz-transition-property: margin,padding,min-height,height;
+   -o-transition-property: margin,padding,min-height,height;
+   -webkit-transition-property: margin,padding,min-height,height;
+   transition-property: margin,padding,min-height,height;
+	margin: 0 auto;
+	overflow:hidden;
+	padding:0;
+}
+.container{
+	margin:0 auto;
+}
+    .container.navigation-menu{
+    	overflow: hidden;
+        background: rgba(256,256,256,0.9);
+        padding: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index:1;
+    }
+
+/*--- START:LOGO STYLES ---*/
+.brand-container {
+	font-size: 1em;
+	line-height:1.2em;
+	margin:0;
+	padding:0;
+	line-height:0;
+	text-align:left;
+	/*width:5em;*/
+}
+    .brand-container .main-logo{
+        height:2em;
+        padding:0.5em 0 0 0.5em;
+    }
+    .brand-container a{
+        float:left;
+    }
+.hero-logo{
+  margin-bottom:1em;
+}
+/*--- START:NAV STYLES ---*/
+nav{
+	/*float:right;*/
+	font-weight:300;
+	margin:0;
+	overflow:hidden;
+	padding: 0;
+}
+.navigation ul{
+	margin:0;
+	padding:0;
+    position:relative;
+}
+	.navigation ul li{
+		display:inline;
+	}
+	.navigation a{
+		background: rgba(0, 0, 0, 0.8);
+		color: rgba(255, 255, 255, 1);
+		display: block;
+		font-weight: 300;
+		line-height: 1.8;
+		opacity: 0.9;
+		padding: 1em;
+		text-decoration:none;
+	}
+    .nav>li>a:focus, .nav>li>a:hover {
+        text-decoration: underline;
+        background-color: transparent;
+        padding: 10px 15px;
+    }
+		.collapse{
+			display:none;
+		}
+		.collapse.in{
+			display:block;
+		}
+		.collapsing{
+			height:0;
+			overflow:hidden;
+			position:relative;
+			-o-transition:height 0.35s ease;
+			-mox-transition:height 0.35s ease;
+			-webkit-transition:height 0.35s ease;
+			transition:height 0.65s ease;
+		}
+
+/*--- START: Bootstrap Button Styles ---*/
+.banner-toggle {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.banner-toggle button {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: transparent;
+    background: none;
+    color: inherit;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+}
+.banner-toggle .icon-bar {
+    margin-top: 0.375em;
+    margin-bottom: 0.375em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 2em;
+    height: 0.125em;
+    background-color: rgba(0,0,0, 0.5);
+}
+/* ==========================================================================
+   START: FULLSCREEN STYLES
+   ========================================================================== */
+/*html{ 
+  background: url(../img/slider/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+/* ==========================================================================
+   START: ARTICLE STYLES
+   ========================================================================== */
+   section{
+       margin:4em auto;
+       padding:0 1em;
+   }
+   article{
+       text-align:center;
+       position:relative;
+   }
+       article>.inner{
+            padding-bottom: 40%;
+            padding-top: 55%;
+       }
+       .accent{
+           color:rgba(63,169,245,1);
+           font-weight:bold;
+       }
+       .hero{
+           margin-top:10em;
+       }
+       .hero .col-xs-6{
+        font-size:0.8em;
+            width: 100%;
+        }
+        footer .col-xs-6{
+            font-size:0.8em;
+        }
+/* ==========================================================================
+   START: FORM STYLES
+   ========================================================================== */
+.form-group {
+    margin-bottom: 15px !important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+label{
+    display: none;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.input-lg{
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 0.8em;
+    line-height: 1.3333333;
+    border-radius: 0;
+}
+.error{
+    font-size:0.8em;
+    text-align: left;
+    color: #fff;
+    margin-top: 0.1em;
+    background: #d62a2a;
+    width: 100%;
+    padding: 1em;
+}
+/* ==========================================================================
+   START: BUTTON STYLES
+   ========================================================================== */
+button, .button, .btn {
+    border-width: 0;
+    border-style: 0 none;
+    padding:1em 2.2em;
+    display: block;
+    /*border-color: rgba(0, 160, 216, 1);*/
+    border-radius: 0.25em;
+    margin:0 auto;
+    vertical-align: middle;
+	/*-webkit-appearance: button;*/
+	cursor: pointer;
+}
+button {
+    text-transform: none;
+}
+button, .btn {
+    overflow: visible;
+}
+button:hover, .button:hover, button:focus, .button:focus,btn:hover, .btn:hover, .btn:focus, .btn:focus {
+    color: rgba(200, 145, 145, 1);
+}
+button, .button, .btn, a.btn {
+	background: rgba(0, 160, 216, 1);
+	color: rgba(256, 256, 256, 1);
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 auto;
+	font-weight: 300;
+	margin-bottom: 0.25em;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+footer{
+    background:rgba(51,51,51,1);
+    padding:1em 0;
+    color:rgba(91,91,91,1);
+    font-size:0.8em;
+}
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media (min-width: 48em){
+	.page{
+		margin: 0 auto -9em;
+		padding-bottom: 0;
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+    }
+	.brand-container{
+		float:left;
+        padding:0.5em;
+	}
+    .brand-container .main-logo{
+        padding:0;
+    }
+	.navigation {
+        /*float:none;*/
+        margin:0 0 0 0;
+        background:none;
+    }
+    .container .navigation-menu{
+        position:fixed;
+        padding:0.5em;
+        top:0;
+    }
+    .navigation.collapse {
+        display: block !important;
+        padding:0.5em;
+        width: 75%;
+        margin: 0 auto;
+    }
+    .navigation ul {
+		float:right;
+        white-space: nowrap;
+    }
+    .navigation ul li {
+        /*float: right;*/
+        display:inline-block;
+        margin-right:0;
+        margin-bottom:0;
+        width:auto;
+    }
+    .navigation li:nth-child(odd) {
+        /*float: right;*/
+        margin-right:0;
+    }
+    .navigation a, .navigation a:hover, .navigation a:focus {
+        background:none;
+        color:rgba(63, 169, 245, 1);
+		padding:0;
+    }
+    .navigation a:hover, .navigation a:focus {
+        text-decoration:underline;
+    }
+    .banner-toggle {
+        display: none;
+        top:-0.5em;
+    }
+    .hero-blurb{
+       min-height:1000px;
+       text-align:center;
+    }
+    section {
+        margin: 6em auto;
+        max-width: 1000px;
+        padding: 0;
+    }
+        .hero .col-xs-6{
+            width: 50%;
+            font-size:1em;
+        }
+    article>.inner{
+            padding-bottom: 40%;
+            padding-top: 33%;
+       }
+    .input-lg{
+        height: 46px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.3333333;
+        border-radius: 0;
+    }
+    .hero{
+        margin-top:2em;
+    }
+    footer{
+        background:rgba(51,51,51,1);
+        padding:4em;
+        color:rgba(91,91,91,1);
+        font-size:0.8em;
+    }
+        footer .col-xs-6{
+            font-size:1em;
+        }
+
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+	a,
+    a:visited {
+        text-decoration: underline;
+    }
+	a[href]:after {
+        content: " (" attr(href) ")";
+    }
+	abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+	/*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+	 a[href^="#"]:after,
+	 a[href^="javascript:"]:after {
+        content: "";
+    }
+	pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+	/*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+ 	thead {
+        display: table-header-group;
+    }
+	tr,
+    img {
+        page-break-inside: avoid;
+    }
+	img {
+        max-width: 100% !important;
+    }
+	p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+	h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

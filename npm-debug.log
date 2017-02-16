@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'owl-carousel' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose config Skipping project config: /Users/nate/.npmrc. (matches userconfig)
+5 warn package.json node@0.0.0 No description
+6 warn package.json node@0.0.0 No repository field.
+7 warn package.json node@0.0.0 No README data
+8 warn package.json package.json@0.0.0 No repository field.
+9 warn package.json sass@0.5.0 No repository field.
+10 silly cache add args [ 'owl-carousel', null ]
+11 verbose cache add spec owl-carousel
+12 silly cache add parsed spec { raw: 'owl-carousel',
+12 silly cache add   scope: null,
+12 silly cache add   name: 'owl-carousel',
+12 silly cache add   rawSpec: '',
+12 silly cache add   spec: '*',
+12 silly cache add   type: 'range' }
+13 verbose addNamed owl-carousel@*
+14 silly addNamed semver.valid null
+15 silly addNamed semver.validRange *
+16 silly addNameRange { name: 'owl-carousel', range: '*', hasData: false }
+17 silly mapToRegistry name owl-carousel
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry uri https://registry.npmjs.org/owl-carousel
+21 verbose addNameRange registry:https://registry.npmjs.org/owl-carousel not in flight; fetching
+22 verbose request uri https://registry.npmjs.org/owl-carousel
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 5:02:47 PM
+25 verbose request id 0d74b861bfb60006
+26 http request GET https://registry.npmjs.org/owl-carousel
+27 http 404 https://registry.npmjs.org/owl-carousel
+28 verbose headers { 'content-type': 'application/json',
+28 verbose headers   'cache-control': 'max-age=0',
+28 verbose headers   'content-length': '2',
+28 verbose headers   'accept-ranges': 'bytes',
+28 verbose headers   date: 'Sun, 12 Feb 2017 04:02:48 GMT',
+28 verbose headers   via: '1.1 varnish',
+28 verbose headers   age: '0',
+28 verbose headers   connection: 'keep-alive',
+28 verbose headers   'x-served-by': 'cache-akl6421-AKL',
+28 verbose headers   'x-cache': 'MISS',
+28 verbose headers   'x-cache-hits': '0',
+28 verbose headers   'x-timer': 'S1486872167.364220,VS0,VE698',
+28 verbose headers   vary: 'Accept-Encoding' }
+29 silly get cb [ 404,
+29 silly get   { 'content-type': 'application/json',
+29 silly get     'cache-control': 'max-age=0',
+29 silly get     'content-length': '2',
+29 silly get     'accept-ranges': 'bytes',
+29 silly get     date: 'Sun, 12 Feb 2017 04:02:48 GMT',
+29 silly get     via: '1.1 varnish',
+29 silly get     age: '0',
+29 silly get     connection: 'keep-alive',
+29 silly get     'x-served-by': 'cache-akl6421-AKL',
+29 silly get     'x-cache': 'MISS',
+29 silly get     'x-cache-hits': '0',
+29 silly get     'x-timer': 'S1486872167.364220,VS0,VE698',
+29 silly get     vary: 'Accept-Encoding' } ]
+30 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/owl-carousel
+30 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:239:14)
+30 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+30 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:344:22)
+30 verbose stack     at Request.emit (events.js:110:17)
+30 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1239:14)
+30 verbose stack     at Request.emit (events.js:129:20)
+30 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1187:12)
+30 verbose stack     at IncomingMessage.emit (events.js:129:20)
+30 verbose stack     at _stream_readable.js:908:16
+30 verbose stack     at process._tickCallback (node.js:355:11)
+31 verbose statusCode 404
+32 verbose pkgid owl-carousel
+33 verbose cwd /Users/nate/Desktop/sites/p74/build
+34 error Darwin 14.5.0
+35 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save" "owl-carousel"
+36 error node v0.12.2
+37 error npm  v2.7.4
+38 error code E404
+39 error 404 Registry returned 404 for GET on https://registry.npmjs.org/owl-carousel
+39 error 404
+39 error 404 'owl-carousel' is not in the npm registry.
+39 error 404 You should bug the author to publish it (or use the name yourself!)
+39 error 404
+39 error 404 Note that you can also install from a
+39 error 404 tarball, folder, http url, or git url.
+40 verbose exit [ 1, true ]
