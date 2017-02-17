@@ -12,6 +12,14 @@ if(isset($_POST['submitted'])) {
         $name = trim($_POST['contactName']);
     }
 
+    // require a number from user
+    if(trim($_POST['phoneNumber']) === '') {
+        $phoneError =  'You forgot your phone number!';
+        $hasError = true;
+    } else {
+        $phoneNumber = trim($_POST['phoneNumber']);
+    }
+
     // need valid email
     if(trim($_POST['email']) === '')  {
         $emailError = 'You forgot to enter in your e-mail address';
@@ -23,9 +31,17 @@ if(isset($_POST['submitted'])) {
         $email = trim($_POST['email']);
     }
 
+    // require a name from user
+    if(trim($_POST['company']) === '') {
+        $companyError =  'You forgot your company name';
+        $hasError = true;
+    } else {
+        $company = trim($_POST['company']);
+    }
+
     // we need at least some content
     if(trim($_POST['comments']) === '') {
-        $commentError = 'You forgot to enter a message!';
+        $commentError = 'You forgot to leave a message!';
         $hasError = true;
     } else {
         if(function_exists('stripslashes')) {
@@ -38,10 +54,10 @@ if(isset($_POST['submitted'])) {
     // upon no failure errors let's email now!
     if(!isset($hasError)) {
 
-        $emailTo = 'nobody@nobodycreative.co.nz';
+        $emailTo = 'project@project74.co.nz';
         $subject = 'Submitted message from '.$name;
         $sendCopy = trim($_POST['sendCopy']);
-        $body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
+        $body = "Name: $name \n\nPhone: $phoneNumber \n\nEmail: $email \n\nCompany: $company \n\nComments: $comments";
         $headers = 'From: ' .' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
         mail($emailTo, $subject, $body, $headers);
